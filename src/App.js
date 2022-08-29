@@ -9,7 +9,7 @@ function App() {
   const [subject, setSubject] = React.useState('');
 
   const send_email = () => {
-    fetch('http://localhost:4000/send', {method: 'POST', headers: {'Content-Type': 'application/json'}, body:JSON.stringify({emails: recepients, subject:subject, message: message})})}
+    fetch('https://guvi-bulk-email.herokuapp.com/send', {method: 'POST', headers: {'Content-Type': 'application/json'}, body:JSON.stringify({emails: recepients, subject:subject, message: message})})}
   //   console.log(recepients)
   // console.log(message) 
   return (
